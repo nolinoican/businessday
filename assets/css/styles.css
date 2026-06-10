@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('../fonts/CoolveticaRg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Chrome, Safari, Edge */
 ::-webkit-scrollbar {
     display: none;
@@ -15,6 +22,7 @@ html {
 
 /* IE/old Edge */
 body {
+    font-family: 'Coolvetica', sans-serif;
     margin: 0;
     padding: 0;
     -ms-overflow-style: none;
@@ -79,6 +87,7 @@ body {
                 font-size: 1.5rem;
                 font-weight: bold;
                 margin: 0;
+                text-shadow: 4px 4px 8px rgb(255 255 255 / 50%);
             }
         }
     }
@@ -119,24 +128,178 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-            .touchscreen-pen-image {
-                background-image: url('../images/touchscreen_pen.jpg');
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                height: 90%;
-                width: 80%;
-                display: flex;
-                align-items: flex-end;    /* bottom */
-                justify-content: center;  /* center horizontally */
-                p {
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    margin: 0;
-                }
+        .touchscreen-pen-image {
+            background-image: url('../images/touchscreen_pen.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 90%;
+            width: 80%;
+            display: flex;
+            align-items: flex-end;    /* bottom */
+            justify-content: center;  /* center horizontally */
+            p {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin: 0;
+                text-shadow: 4px 4px 8px rgb(255 255 255 / 50%);
             }
+        }
     }
 }
+
+.adhesive-card-pocket {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(213,62,34);
+    text-align: center;
+    justify-content: space-evenly;
+    background-image: url('../images/card_pocket_bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    .item-container {
+        width: 100%;
+        min-height: 18vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            margin: 0;
+        }
+    }
+    .adhesive-card-pocket-image-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    h3 {
+        font-size: 5rem !important;
+        margin: 0;
+    }
+    .adhesive-card-pocket-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90%;
+    }
+    .navy-adhesive-card-pocket-image {
+        background-image: url('../images/navy_adhesive_card_pocket.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 60vh;
+        width: 100%;
+    }
+    .black-adhesive-card-pocket-image {
+        background-image: url('../images/black_adhesive_card_pocket.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 60vh;
+        width: 100%;
+    }
+    .image-overlay {
+        text-align: center;
+        .label,
+        .price {
+            margin: 0;
+        }
+    }
+    .left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+    }
+    .right {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+    }
+}
+
+.airpod-cases {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(213,62,34);
+    text-align: center;
+    justify-content: space-evenly;
+    background-image: url('../images/footer_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .item-container {
+        width: 100%;
+        min-height: 18vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            margin: 0;
+        }
+    }
+    .airpod-cases-image-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    h3 {
+        font-size: 5rem !important;
+        margin: 0;
+    }
+    .airpod-cases-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90%;
+    }
+    .azure-airpod-cases-image {
+        background-image: url('../images/azure_airpods_gen_3.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 60vh;
+        width: 100%;
+    }
+    .white-airpod-cases-image {
+        background-image: url('../images/white_airpods_gen_4.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 60vh;
+        width: 100%;
+    }
+    .image-overlay {
+        text-align: center;
+        .label,
+        .price {
+            margin: 0;
+        }
+    }
+    .left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+    }
+    .right {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+    }
+}
+
 .footer {
     min-height: 10vh;
     display: flex;
@@ -221,4 +384,35 @@ body {
             }
         }
     }
+
+    .adhesive-card-pocket {
+        height: 100%;
+        min-height: unset !important;
+        background-size: cover;
+        .item-container {
+            h3 {
+                font-size: 3rem !important;
+            }
+        }
+        .navy-adhesive-card-pocket-image,
+        .black-adhesive-card-pocket-image {
+            height: 30vh;
+        }
+    }
+
+    .airpod-cases {
+        height: 100%;
+        min-height: unset !important;
+        background-size: cover;
+        .item-container {
+            h3 {
+                font-size: 3rem !important;
+            }
+        }
+        .azure-airpod-cases-image,
+        .white-airpod-cases-image {
+            height: 30vh;
+        }
+    }
+
 }
