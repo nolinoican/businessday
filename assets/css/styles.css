@@ -2,7 +2,10 @@
 ::-webkit-scrollbar {
     display: none;
 }
-
+html,
+body {
+    overflow-x: hidden;
+}
 /* Firefox */
 html {
     margin: 0;
@@ -16,33 +19,206 @@ body {
     padding: 0;
     -ms-overflow-style: none;
 }
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.content {
+    flex-direction: column;
+}
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .header {
     background-image: url('../images/header.jpg');
     background-size: cover;
     background-position: center;
-    padding: 0;
     color: #ffffff;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
     h1 {
         font-size: 6rem;
         margin: 0;
     }
 }
 
+.waterproof-pouch {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(213,62,34);
+    flex-direction: row;
+    justify-content: center;
+    .left {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .waterproof-pouch-image {
+            background-image: url('../images/waterproof_pouch.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 90%;
+            width: 80%;
+            display: flex;
+            align-items: flex-end;    /* bottom */
+            justify-content: center;  /* center horizontally */
+            p {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+    }
+    .right {
+        text-align: left;
+        width: 100%;
+        h3 {
+            font-size: 6rem !important;
+            margin: 0;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
+.touchscreen-pen {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(213,62,34);
+    color: #000000;
+    flex-direction: row;
+    justify-content: center;
+    .left {
+        text-align: right;
+        width: 100%;
+        h3 {
+            font-size: 6rem !important;
+            margin: 0;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+    .right {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+            .touchscreen-pen-image {
+                background-image: url('../images/touchscreen_pen.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 90%;
+                width: 80%;
+                display: flex;
+                align-items: flex-end;    /* bottom */
+                justify-content: center;  /* center horizontally */
+                p {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin: 0;
+                }
+            }
+    }
+}
+.footer {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #000000;
+    color: rgb(213,62,34);
+    .acdc-footer, .business-day-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        p {
+            margin: 0;
+        }
+        .acdc-text {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+
+}
+
 @media (max-width: 768px) {
     .header {
         h1 {
+            margin: 0;
             font-size: 2rem;
         }
         h2 {
             font-size: 1rem;
+        }
+    }
+
+    .waterproof-pouch {
+        flex-direction: column;
+        .left {
+            height: 100vh;
+            width: 100%;
+            .waterproof-pouch-image {
+                width: 100%;
+            }
+        }
+        .right {
+            text-align: center !important;
+            font-size: 1.7rem !important;
+            padding: 0 16px;
+            h3 {
+                font-size: 3rem !important;
+                margin: 0;
+            }
+            p {
+                font-size: 1.7rem;
+                margin: 12px;
+            }
+        }
+    }
+
+    .touchscreen-pen {
+        flex-direction: column-reverse;
+        .right {
+            height: 100vh;
+            width: 100%;
+            .touchscreen-pen-image {
+                width: 100%;
+            }
+        }
+        .left {
+            text-align: center !important;
+            font-size: 1.7rem !important;
+            padding: 0 16px;
+            h3 {
+                font-size: 3rem !important;
+                margin: 0;
+            }
+            p {
+                font-size: 1.7rem;
+                margin: 12px;
+            }
         }
     }
 }
